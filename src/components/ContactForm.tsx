@@ -31,9 +31,9 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Ready to Transform Care Delivery?</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Ready to See It in Action?</h2>
             <p className="text-xl text-muted-foreground">
-              Get a personalized demo and see how our AI Care Infrastructure can scale your operations.
+              Let's explore how our AI Care Infrastructure can power your next stage of growth.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ const ContactForm = () => {
                         <SelectItem value="employer">Self-Insured Employer</SelectItem>
                         <SelectItem value="hospital">Hospital/Health System</SelectItem>
                         <SelectItem value="payer">Payer/Insurance Provider</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectItem value="digital-health">Digital Health Company</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -112,7 +112,7 @@ const ContactForm = () => {
                     className="w-full bg-gradient-primary hover:opacity-90 shadow-card"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Submitting..." : "Request Demo"}
+                    {isSubmitting ? "Submitting..." : "Contact US"}
                   </Button>
                 </div>
 

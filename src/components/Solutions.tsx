@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Building2, Hospital, Shield } from "lucide-react";
+import { Building2, Hospital, Shield, Code } from "lucide-react";
 
 const Solutions = () => {
   const solutions = [
@@ -12,7 +12,7 @@ const Solutions = () => {
         "Turnkey chronic care kits for high-risk employees",
         "No PHI exposure — de-identified, aggregated insights", 
         "Proof of ROI in 90-day pilot programs",
-        "Compatible with wellness programs or RPM reimbursement via your plan's provider network"
+        "Compatible with wellness programs or RPM reimbursement"
       ]
     },
     {
@@ -35,8 +35,20 @@ const Solutions = () => {
       benefits: [
         "Early risk detection with predictive AI",
         "Member engagement without increasing staff load",
-        "Device + AI platform white-labeled to your brand",
+        "Device + AI platform customizable to your brand",
         "Scalable from pilot programs to millions of members"
+      ]
+    },
+    {
+      icon: Code,
+      title: "Digital Health Companies",
+      headline: "Accelerate Your Product Roadmap with Plug-and-Play Care Infrastructure", 
+      description: "Building reliable device connectivity, engagement AI, and scalable care delivery infrastructure takes years. We've already done it for you. Digital health companies use our device + AI platform to quickly add RPM, chronic care, or lifestyle engagement features — without reinventing the stack.",
+      benefits: [
+        "Pre-integrated device ecosystem (tablet + wearables + vitals)",
+        "Voice-enabled AI coach for engagement & support",
+        "API-ready and developer-friendly for fast integration",
+        "Scale from MVP to enterprise deployments without infrastructure overhead"
       ]
     }
   ];

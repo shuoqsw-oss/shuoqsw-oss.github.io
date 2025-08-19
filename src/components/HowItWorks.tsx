@@ -1,31 +1,31 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ShoppingCart, Bluetooth, Bot, BarChart3 } from "lucide-react";
+import { Package, Bluetooth, Bot, BarChart3 } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: ShoppingCart,
+      icon: Package,
       number: "01",
-      title: "You order kits",
-      description: "We ship devices to your patients or facilities."
+      title: "Unbox & Power On",
+      description: "Devices are pre-configured, paired, and ready to use."
     },
     {
       icon: Bluetooth,
       number: "02", 
-      title: "Patients connect & measure",
-      description: "Devices pair instantly, no setup confusion."
+      title: "Automatic Data Flow",
+      description: "Vitals stream seamlessly to our AI platform via Wi-Fi or cellular."
     },
     {
       icon: Bot,
       number: "03",
-      title: "AI engages daily",
-      description: "Proactive nudges, health education, and tailored follow-ups."
+      title: "AI Engagement",
+      description: "Patients get reminders, coaching, and 24/7 support through natural voice or tablet prompts."
     },
     {
       icon: BarChart3,
       number: "04",
-      title: "You see results",
-      description: "Engagement reports, adherence rates, and escalation flags via dashboard."
+      title: "Actionable Insights",
+      description: "Our AI flags risks, generates health summaries, and escalates only what matters to clinicians."
     }
   ];
 
@@ -33,10 +33,7 @@ const HowItWorks = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-6">
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground">How It Works</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explain the workflow from your client's perspective
-          </p>
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground">From Box to Insights in Minutes.</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">

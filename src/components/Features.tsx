@@ -7,7 +7,8 @@ import {
   TrendingUp, 
   FileText, 
   AlertTriangle, 
-  Tag, 
+  Mic, 
+  Code, 
   Database 
 } from "lucide-react";
 
@@ -16,47 +17,52 @@ const Features = () => {
     {
       icon: Settings,
       title: "Easy Setup",
-      description: "Devices arrive pre-charged, pre-configured, and already paired to the AI platform. Patients (or employees) simply open the box and start using."
+      description: "Devices arrive pre-charged, pre-configured, and already paired."
     },
     {
       icon: Wifi,
       title: "Seamless Data Transmission", 
-      description: "Readings are automatically sent via Wi-Fi or cellular."
+      description: "Readings flow via Wi-Fi or cellular."
     },
     {
       icon: Package,
       title: "All-In-One Kit",
-      description: "Tablet, blood pressure monitor, scale, and watch — fully connected from day one."
+      description: "Tablet, BP monitor, scale, watch — connected from day one."
     },
     {
       icon: Bot,
       title: "AI Health Coach",
-      description: "Answers questions 24/7, sends reminders, and provides personalized follow-up to replace routine human outreach."
+      description: "24/7 reminders, Q&A, personalized follow-up."
     },
     {
       icon: TrendingUp,
       title: "Risk Prediction AI",
-      description: "Continuously analyzes patterns to detect early signs of deterioration or complications."
+      description: "Detects early signs of complications."
     },
     {
       icon: FileText,
       title: "Health Evaluation AI", 
-      description: "Generates weekly wellness summaries and improvement suggestions, tailored to the individual."
+      description: "Generates weekly summaries & recommendations."
     },
     {
       icon: AlertTriangle,
       title: "Automated Alerts",
-      description: "Flags urgent cases for human review, ensuring clinicians focus where they're most needed."
+      description: "Escalates urgent cases to clinicians."
     },
     {
-      icon: Tag,
-      title: "White-Label Ready",
-      description: "Delivered under your organization's brand for patient or employee trust."
+      icon: Mic,
+      title: "Voice-Enabled",
+      description: "Hands-free interaction for reminders & check-ins."
+    },
+    {
+      icon: Code,
+      title: "API Ready, Developer Friendly",
+      description: "Seamless integration with your platform."
     },
     {
       icon: Database,
       title: "EHR/Platform Integration",
-      description: "Compatible with common hospital and insurer systems for streamlined workflow."
+      description: "Works with common provider and payer systems."
     }
   ];
 

@@ -9,19 +9,16 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                The Future of Care,{" "}
-                <span className="block text-white/90">Delivered as Infrastructure</span>
+                The AI Care Infrastructure{" "}
+                <span className="block text-white/90">for Connected Health</span>
               </h1>
               <p className="text-xl lg:text-2xl text-white/80 leading-relaxed">
-                We provide healthcare organizations with ready-to-deploy devices and AI-powered engagement—so you can scale care without scaling staff.
+                From providers to payers to digital health innovators — we deliver the devices, AI, and automation that make remote care scalable, affordable, and effective.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 shadow-hero">
-                Request a Demo
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                Partner With Us
+                Get a Demo
               </Button>
             </div>
           </div>
