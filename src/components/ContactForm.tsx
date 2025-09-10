@@ -10,20 +10,73 @@ import { useToast } from "@/hooks/use-toast";
 const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState("");
+  const [organization, setOrganization] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [useCase, setUseCase] = useState<string | undefined>(undefined);
+  const [volume, setVolume] = useState<string | undefined>(undefined);
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Demo Request Submitted",
-      description: "We'll contact you within 24 hours to schedule your demo.",
-    });
-    
-    setIsSubmitting(false);
+    if (!name || !organization || !email || !useCase) {
+      toast({
+        title: "Missing required fields",
+        description: "Name, Organization, Email, and Intended Use Case are required.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const payload = {
+        customer_name: name,
+        customer_email: email,
+        customer_phone: phone || "",
+        customer_org: organization,
+        customer_intent: useCase,
+        customer_volume: volume || "",
+        customer_details: message || "",
+      };
+
+      const resp = await fetch(
+        "https://test.plentyhealth.cn/questionnaire/inquiry",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!resp.ok) {
+        throw new Error(`Request failed: ${resp.status}`);
+      }
+
+      toast({
+        title: "Submitted",
+        description: "We'll reach out shortly.",
+      });
+
+      setName("");
+      setOrganization("");
+      setEmail("");
+      setPhone("");
+      setUseCase(undefined);
+      setVolume(undefined);
+      setMessage("");
+    } catch (err: unknown) {
+      toast({
+        title: "Submission failed",
+        description: err instanceof Error ? err.message : "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -46,29 +99,29 @@ const ContactForm = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
-                    <Input id="name" required className="bg-background" />
+                    <Input id="name" required className="bg-background" value={name} onChange={(e) => setName(e.target.value)} />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="organization">Organization *</Label>
-                    <Input id="organization" required className="bg-background" />
+                    <Input id="organization" required className="bg-background" value={organization} onChange={(e) => setOrganization(e.target.value)} />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="email">Email *</Label>
-                    <Input id="email" type="email" required className="bg-background" />
+                    <Input id="email" type="email" required className="bg-background" value={email} onChange={(e) => setEmail(e.target.value)} />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" type="tel" className="bg-background" />
+                    <Input id="phone" type="tel" className="bg-background" value={phone} onChange={(e) => setPhone(e.target.value)} />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="use-case">Intended Use Case *</Label>
-                    <Select required>
+                    <Select value={useCase} onValueChange={setUseCase}>
                       <SelectTrigger className="bg-background">
                         <SelectValue placeholder="Select your use case" />
                       </SelectTrigger>
@@ -77,12 +130,13 @@ const ContactForm = () => {
                         <SelectItem value="hospital">Hospital/Health System</SelectItem>
                         <SelectItem value="payer">Payer/Insurance Provider</SelectItem>
                         <SelectItem value="digital-health">Digital Health Company</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="volume">Volume Estimate</Label>
-                    <Select>
+                    <Select value={volume} onValueChange={setVolume}>
                       <SelectTrigger className="bg-background">
                         <SelectValue placeholder="Expected number of users" />
                       </SelectTrigger>
@@ -102,6 +156,8 @@ const ContactForm = () => {
                     id="message" 
                     placeholder="Tell us about your specific needs, timeline, or any questions you have..."
                     className="bg-background min-h-[100px]"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
 
