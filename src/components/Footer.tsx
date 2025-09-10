@@ -25,7 +25,7 @@ const Footer = () => {
         
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            © 2024 CareInfra. All rights reserved. | AI-Powered Healthcare Infrastructure
+            © 2025 CareInfra. All rights reserved. | AI-Powered Healthcare Infrastructure
           </p>
         </div>
       </div>
