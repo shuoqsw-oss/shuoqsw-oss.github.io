@@ -19,7 +19,7 @@ import {
   Briefcase,
   Rocket
 } from "lucide-react";
-import heroImage from "@/assets/hero-healthcare.jpg";
+import heroVideo from "@/assets/20250909-152158.mp4";
 
 const Index = () => {
   return (
@@ -33,7 +33,7 @@ const Index = () => {
                 Healthcare Innovation
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                The AI Care Infrastructure for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connected Health</span>
+                CareInfra — The AI Care Infrastructure for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connected Health</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 From hospitals to payers to digital health innovators — we deliver the devices, AI, and automation that make remote care engaging, scalable, and outcome-driven.
@@ -62,10 +62,13 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src={heroImage} 
-                alt="Connected healthcare devices showing integrated health monitoring platform" 
+              <video
+                src={heroVideo}
+                loop
+                playsInline
+                controls
                 className="rounded-2xl shadow-strong w-full"
+                aria-label="Connected healthcare devices showing integrated health monitoring platform"
               />
             </div>
           </div>
@@ -484,7 +487,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <p className="text-lg font-semibold">
-              24/7 Virtual Care Assistant Platform — Secure, Scalable, and Human.
+              CareInfra — 24/7 Virtual Care Assistant Platform — Secure, Scalable, and Human.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
