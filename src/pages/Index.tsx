@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { 
   Shield, 
   Zap, 
@@ -24,8 +28,25 @@ import heroVideo from "@/assets/20250909-152158.mp4";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <a href="#home" className="font-bold text-lg">CareInfra</a>
+          <nav className="hidden md:flex items-center gap-6 text-sm">
+            <a href="#why" className="hover:text-primary">Why</a>
+            <a href="#solution" className="hover:text-primary">Solution</a>
+            <a href="#how" className="hover:text-primary">How It Works</a>
+            <a href="#who-we-serve" className="hover:text-primary">Who We Serve</a>
+            <a href="#features" className="hover:text-primary">Features</a>
+            <a href="#outcomes" className="hover:text-primary">Outcomes</a>
+            <Button size="sm" asChild>
+              <a href="#contact">Contact</a>
+            </Button>
+          </nav>
+        </div>
+      </header>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30">
+      <section id="home" className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 scroll-mt-24">
         <div className="container mx-auto px-4 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -33,7 +54,7 @@ const Index = () => {
                 Healthcare Innovation
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                CareInfra — The AI Care Infrastructure for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connected Health</span>
+                The AI Care Infrastructure for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connected Health</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 From hospitals to payers to digital health innovators — we deliver the devices, AI, and automation that make remote care engaging, scalable, and outcome-driven.
@@ -53,11 +74,11 @@ const Index = () => {
                 </Badge>
               </div>
               <div className="flex flex-wrap gap-4">
-                <Button variant="hero" size="lg">
-                  Get a Demo
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#contact">Get a Demo</a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  Contact Us
+                <Button variant="outline" size="lg" asChild>
+                  <a href="#contact">Contact Us</a>
                 </Button>
               </div>
             </div>
@@ -76,7 +97,7 @@ const Index = () => {
       </section>
 
       {/* Why It Matters Section */}
-      <section className="py-20 lg:py-32">
+      <section id="why" className="py-20 lg:py-32 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -116,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-secondary/30 to-background">
+      <section id="solution" className="py-20 lg:py-32 bg-gradient-to-b from-secondary/30 to-background scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -133,7 +154,7 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 lg:py-32">
+      <section id="how" className="py-20 lg:py-32 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -164,14 +185,12 @@ const Index = () => {
       </section>
 
       {/* Who We Power Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-secondary/30">
+      <section id="who-we-serve" className="py-20 lg:py-32 bg-gradient-to-b from-background to-secondary/30 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              The Infrastructure Behind <span className="text-primary">Every Scalable Care Program</span>
-            </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Who We Serve</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Whether you're a hospital expanding virtual care, a payer managing risk, or a digital health company building the next breakthrough — our platform delivers the foundation for connected care that's secure, compliant, and ready for enterprise use.
+              Whether you're a hospital expanding virtual care, a payer managing risk, an employer improving workforce health, or a digital health company building the next breakthrough — our platform delivers the foundation for connected care that's secure, compliant, and ready for enterprise use.
             </p>
           </div>
         </div>
@@ -206,7 +225,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="hero" size="lg">Learn More</Button>
+              <Button variant="hero" size="lg" asChild><a href="#contact">Learn More</a></Button>
             </div>
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
               <div className="space-y-6">
@@ -287,7 +306,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="hero" size="lg">Schedule Demo</Button>
+              <Button variant="hero" size="lg" asChild><a href="#contact">Schedule Demo</a></Button>
             </div>
           </div>
         </div>
@@ -322,7 +341,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="hero" size="lg">Explore Solutions</Button>
+              <Button variant="hero" size="lg" asChild><a href="#contact">Explore Solutions</a></Button>
             </div>
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
               <div className="space-y-6">
@@ -399,14 +418,14 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <Button variant="hero" size="lg">View API Docs</Button>
+              <Button variant="hero" size="lg" asChild><a href="#contact">View API Docs</a></Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Platform Features */}
-      <section className="py-20 lg:py-32">
+      <section id="features" className="py-20 lg:py-32 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -441,7 +460,7 @@ const Index = () => {
       </section>
 
       {/* Outcome Alignment */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-secondary/30 to-background">
+      <section id="outcomes" className="py-20 lg:py-32 bg-gradient-to-b from-secondary/30 to-background scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge className="bg-primary/10 text-primary border-primary/20 text-base py-2 px-6">
@@ -471,14 +490,81 @@ const Index = () => {
               Let's explore how our HIPAA-compliant AI Care Infrastructure can power your next stage of growth.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Get a Demo
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
+                <a href="#contact">Get a Demo</a>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Contact Us
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
+                <a href="#contact">Contact Us</a>
               </Button>
             </div>
           </Card>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section id="contact" className="py-20 lg:py-32 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center space-y-4 mb-10">
+              <Badge className="bg-primary/10 text-primary border-primary/20">Contact Us</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold">We’d love to hear from you</h2>
+              <p className="text-muted-foreground">Tell us about your goals and we’ll get back within 1 business day.</p>
+            </div>
+            <Card className="p-6 md:p-8 space-y-6 border-primary/20">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name *</Label>
+                    <Input id="name" name="name" placeholder="Jane Doe" required />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="organization">Organization *</Label>
+                    <Input id="organization" name="organization" placeholder="Acme Health" required />
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input id="email" name="email" type="email" placeholder="jane@company.com" required />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="+1 555 123 4567" />
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="usecase">Intended Use Case *</Label>
+                    <Select name="usecase" required>
+                      <SelectTrigger id="usecase" aria-label="Select your use case">
+                        <SelectValue placeholder="Select your use case" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="rpm">Remote Patient Monitoring (RPM)</SelectItem>
+                        <SelectItem value="ccm">Chronic Care Management (CCM)</SelectItem>
+                        <SelectItem value="employers">Employer Wellness / Benefits</SelectItem>
+                        <SelectItem value="payers">Payer Programs</SelectItem>
+                        <SelectItem value="digital-health">Digital Health Product</SelectItem>
+                        <SelectItem value="research">Clinical Research / Trials</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="volume">Volume Estimate</Label>
+                    <Input id="volume" name="volume" type="number" min={0} placeholder="Expected number of users" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="details">Additional Details</Label>
+                  <Textarea id="details" name="details" placeholder="Anything else we should know?" rows={5} />
+                </div>
+                <div className="flex justify-end">
+                  <Button type="submit" variant="hero">Send Message</Button>
+                </div>
+              </form>
+            </Card>
+          </div>
         </div>
       </section>
 
