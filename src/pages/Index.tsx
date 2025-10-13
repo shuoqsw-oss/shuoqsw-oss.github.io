@@ -53,7 +53,7 @@ const Index = () => {
       </header>
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30 scroll-mt-24">
-        <div className="container mx-auto px-4 py-20 lg:py-32">
+        <div className="container mx-auto px-4 pt-12 pb-20 lg:pt-16 lg:pb-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
@@ -63,7 +63,7 @@ const Index = () => {
                 The AI Care Infrastructure for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connected Health</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                From hospitals to payers to digital health innovators — we deliver the devices, AI, and automation that make remote care engaging, scalable, and outcome-driven.
+                From hospitals to payers to employers to digital health innovators — we deliver the devices, AI, and automation that make remote care engaging, scalable, and outcome-driven.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <Badge variant="outline" className="text-sm py-2 px-4">
