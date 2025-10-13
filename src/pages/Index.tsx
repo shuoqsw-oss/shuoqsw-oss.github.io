@@ -26,6 +26,7 @@ import {
   Rocket
 } from "lucide-react";
 import heroVideo from "@/assets/20250909-152158.mp4";
+import voiceDemo from "@/assets/efa48339-326cf626.mp4";
 
 const Index = () => {
   const { toast } = useToast();
@@ -45,7 +46,7 @@ const Index = () => {
             <a href="#features" className="hover:text-primary">Features</a>
             <a href="#outcomes" className="hover:text-primary">Outcomes</a>
             <Button size="sm" asChild>
-              <a href="#contact">Contact</a>
+              <a href="#contact">Contact Us</a>
             </Button>
           </nav>
         </div>
@@ -81,9 +82,6 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="lg" asChild>
                   <a href="#contact">Get a Demo</a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="#contact">Contact Us</a>
                 </Button>
               </div>
             </div>
@@ -461,6 +459,19 @@ const Index = () => {
               </Card>
             ))}
           </div>
+          {/* Feature demo video */}
+          <div className="max-w-4xl mx-auto mt-16 space-y-4">
+            <video
+              src={voiceDemo}
+              controls
+              playsInline
+              className="rounded-2xl shadow-strong w-full"
+              aria-label="AI Assistant voice demo"
+            />
+            <p className="text-center text-muted-foreground">
+              Hear AI Assistant in action: natural-sounding voice, low latency, and near-instant responses.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -496,9 +507,6 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
-                <a href="#contact">Get a Demo</a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
                 <a href="#contact">Contact Us</a>
               </Button>
             </div>
