@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 import { 
   Shield, 
   Zap, 
@@ -26,6 +28,9 @@ import {
 import heroVideo from "@/assets/20250909-152158.mp4";
 
 const Index = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [usecase, setUsecase] = useState<string | undefined>(undefined);
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -511,7 +516,53 @@ const Index = () => {
               <p className="text-muted-foreground">Tell us about your goals and we’ll get back within 1 business day.</p>
             </div>
             <Card className="p-6 md:p-8 space-y-6 border-primary/20">
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form
+                className="space-y-6"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  if (isSubmitting) return;
+                  const form = e.currentTarget as HTMLFormElement;
+                  const formData = new FormData(form);
+                  const name = String(formData.get("name") || "").trim();
+                  const organization = String(formData.get("organization") || "").trim();
+                  const email = String(formData.get("email") || "").trim();
+                  const phone = String(formData.get("phone") || "").trim();
+                  const volume = String(formData.get("volume") || "").trim();
+                  const details = String(formData.get("details") || "").trim();
+
+                  if (!name || !organization || !email || !usecase) {
+                    toast({ title: "Missing required fields", description: "Name, Organization, Email and Use Case are required." });
+                    return;
+                  }
+
+                  const payload = {
+                    customer_name: name,
+                    customer_email: email,
+                    customer_phone: phone || undefined,
+                    customer_org: organization,
+                    customer_intent: usecase,
+                    customer_volume: volume || undefined,
+                    customer_details: details || undefined,
+                  };
+
+                  try {
+                    setIsSubmitting(true);
+                    const res = await fetch("https://test.plentyhealth.cn/questionnaire/inquiry", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(payload),
+                    });
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    toast({ title: "Submitted", description: "We will get back within 1 business day." });
+                    form.reset();
+                    setUsecase(undefined);
+                  } catch (err) {
+                    toast({ title: "Submission failed", description: "Please try again later or contact us through another channel." });
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}
+              >
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
@@ -535,7 +586,7 @@ const Index = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="usecase">Intended Use Case *</Label>
-                    <Select name="usecase" required>
+                    <Select value={usecase} onValueChange={setUsecase}>
                       <SelectTrigger id="usecase" aria-label="Select your use case">
                         <SelectValue placeholder="Select your use case" />
                       </SelectTrigger>
@@ -560,7 +611,9 @@ const Index = () => {
                   <Textarea id="details" name="details" placeholder="Anything else we should know?" rows={5} />
                 </div>
                 <div className="flex justify-end">
-                  <Button type="submit" variant="hero">Send Message</Button>
+                  <Button type="submit" variant="hero" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting..." : "Send Message"}
+                  </Button>
                 </div>
               </form>
             </Card>
