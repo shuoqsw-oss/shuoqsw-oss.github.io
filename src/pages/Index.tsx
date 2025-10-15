@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { 
@@ -187,7 +188,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who We Power Section */}
+      {/* Who We Serve Section */}
       <section id="who-we-serve" className="py-20 lg:py-32 bg-gradient-to-b from-background to-secondary/30 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
@@ -196,14 +197,32 @@ const Index = () => {
               Whether you're a hospital expanding virtual care, a payer managing risk, an employer improving workforce health, or a digital health company building the next breakthrough — our platform delivers the foundation for connected care that's secure, compliant, and ready for enterprise use.
             </p>
           </div>
-        </div>
-      </section>
+          
+          {/* Desktop Tabs View */}
+          <div className="hidden lg:block">
+            <Tabs defaultValue="employers" className="max-w-7xl mx-auto">
+              <TabsList className="grid w-full grid-cols-4 mb-12">
+                <TabsTrigger value="employers" className="flex items-center gap-2">
+                  <Briefcase className="w-4 h-4" />
+                  <span>Employers</span>
+                </TabsTrigger>
+                <TabsTrigger value="hospitals" className="flex items-center gap-2">
+                  <Building2 className="w-4 h-4" />
+                  <span>Hospitals</span>
+                </TabsTrigger>
+                <TabsTrigger value="payers" className="flex items-center gap-2">
+                  <HeartPulse className="w-4 h-4" />
+                  <span>Payers</span>
+                </TabsTrigger>
+                <TabsTrigger value="digital-health" className="flex items-center gap-2">
+                  <Rocket className="w-4 h-4" />
+                  <span>Digital Health Companies</span>
+                </TabsTrigger>
+              </TabsList>
 
-      {/* Target Audiences Sections */}
-      {/* Employers */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Employers Tab */}
+            <TabsContent value="employers" className="space-y-8">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -211,7 +230,7 @@ const Index = () => {
                 </div>
                 <Badge className="bg-primary/10 text-primary border-primary/20">For Employers</Badge>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">Reduce Claims. Improve Wellbeing.</h2>
+                  <h3 className="text-3xl md:text-4xl font-bold">Reduce Claims. Improve Wellbeing.</h3>
               <p className="text-lg text-muted-foreground">
                 Empower employees to stay healthy with ready-to-use care kits and an AI wellness coach. Every engagement earns points, builds habits, and reduces preventable claims.
               </p>
@@ -251,13 +270,11 @@ const Index = () => {
               </div>
             </Card>
           </div>
-        </div>
-      </section>
+            </TabsContent>
 
-      {/* Hospitals */}
-      <section className="py-20 lg:py-32 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Hospitals Tab */}
+            <TabsContent value="hospitals" className="space-y-8">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 order-2 lg:order-1">
               <div className="space-y-6">
                 <div className="text-4xl font-bold text-primary">Launch in Days</div>
@@ -291,7 +308,7 @@ const Index = () => {
                 </div>
                 <Badge className="bg-primary/10 text-primary border-primary/20">For Hospitals & Health Systems</Badge>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">Expand Virtual Care Without Expanding Staff</h2>
+                  <h3 className="text-3xl md:text-4xl font-bold">Expand Virtual Care Without Expanding Staff</h3>
               <p className="text-lg text-muted-foreground">
                 Launch or scale remote care instantly. Our AI assistant automates check-ins, reminders, and triage — so clinicians focus only on what matters.
               </p>
@@ -312,13 +329,11 @@ const Index = () => {
               <Button variant="hero" size="lg" asChild><a href="#contact">Schedule Demo</a></Button>
             </div>
           </div>
-        </div>
-      </section>
+            </TabsContent>
 
-      {/* Payers */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Payers Tab */}
+            <TabsContent value="payers" className="space-y-8">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -326,7 +341,7 @@ const Index = () => {
                 </div>
                 <Badge className="bg-primary/10 text-primary border-primary/20">For Payers & Health Plans</Badge>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">Predict Risk. Engage Members. Improve Outcomes.</h2>
+                  <h3 className="text-3xl md:text-4xl font-bold">Predict Risk. Engage Members. Improve Outcomes.</h3>
               <p className="text-lg text-muted-foreground">
                 Deliver proactive care and stronger member relationships through real-time engagement, predictive analytics, and scalable automation.
               </p>
@@ -371,13 +386,11 @@ const Index = () => {
               </div>
             </Card>
           </div>
-        </div>
-      </section>
+            </TabsContent>
 
-      {/* Digital Health Companies */}
-      <section className="py-20 lg:py-32 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Digital Health Tab */}
+            <TabsContent value="digital-health" className="space-y-8">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20 order-2 lg:order-1">
               <div className="space-y-6">
                 <div className="text-4xl font-bold text-primary">Weeks, Not Years</div>
@@ -403,7 +416,230 @@ const Index = () => {
                 </div>
                 <Badge className="bg-primary/10 text-primary border-primary/20">For Digital Health Companies</Badge>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold">Accelerate Your Roadmap with Plug-and-Play Infrastructure</h2>
+                  <h3 className="text-3xl md:text-4xl font-bold">Accelerate Your Roadmap with Plug-and-Play Infrastructure</h3>
+                  <p className="text-lg text-muted-foreground">
+                    Skip the years of infrastructure work. Integrate our device ecosystem and AI engagement platform to launch RPM, chronic care, or lifestyle features in weeks.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Tablet + wearables + vitals — all connected",
+                      "Voice, video, or chat AI engagement",
+                      "Exercise tracking and movement feedback",
+                      "Developer-friendly APIs",
+                      "HIPAA compliant with optional BAA for customers"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="hero" size="lg" asChild><a href="#contact">View API Docs</a></Button>
+                </div>
+              </div>
+            </TabsContent>
+            </Tabs>
+          </div>
+
+          {/* Mobile Stacked View */}
+          <div className="lg:hidden space-y-20">
+            {/* Employers */}
+            <div className="space-y-8">
+              <div className="grid gap-12 items-center">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Briefcase className="w-6 h-6 text-primary" />
+                    </div>
+                    <Badge className="bg-primary/10 text-primary border-primary/20">For Employers</Badge>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold">Reduce Claims. Improve Wellbeing.</h3>
+                  <p className="text-lg text-muted-foreground">
+                    Empower employees to stay healthy with ready-to-use care kits and an AI wellness coach. Every engagement earns points, builds habits, and reduces preventable claims.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Chronic care kits for high-risk groups",
+                      "Personalized feedback & rewards",
+                      "HIPAA-compliant platform with de-identified insights",
+                      "90-day pilot programs with measurable engagement ROI"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="hero" size="lg" asChild><a href="#contact">Learn More</a></Button>
+                </div>
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+                  <div className="space-y-6">
+                    <div className="text-4xl font-bold text-primary">Built on Best Practices</div>
+                    <p className="text-muted-foreground">Our AI solution follows national clinical guidelines — you customize and build on top</p>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Evidence-based care protocols</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Customizable to your programs</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Measure what matters to you</span>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+
+            {/* Hospitals */}
+            <div className="space-y-8 bg-secondary/30 py-16 px-4 -mx-4 rounded-lg">
+              <div className="grid gap-12 items-center">
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+                  <div className="space-y-6">
+                    <div className="text-4xl font-bold text-primary">Launch in Days</div>
+                    <p className="text-muted-foreground">Deploy remote care programs without hiring additional staff</p>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Heart className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="font-semibold">Reduce Readmissions</div>
+                          <div className="text-sm text-muted-foreground">Automated monitoring & alerts</div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Brain className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="font-semibold">AI Triage</div>
+                          <div className="text-sm text-muted-foreground">Smart prioritization of patients</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Building2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <Badge className="bg-primary/10 text-primary border-primary/20">For Hospitals & Health Systems</Badge>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold">Expand Virtual Care Without Expanding Staff</h3>
+                  <p className="text-lg text-muted-foreground">
+                    Launch or scale remote care instantly. Our AI assistant automates check-ins, reminders, and triage — so clinicians focus only on what matters.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Reduce readmissions & improve adherence",
+                      "Rapid deployment with pre-paired kits",
+                      "AI-driven triage & risk prediction",
+                      "Seamless EHR integration",
+                      "HIPAA compliant + BAA available on request"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="hero" size="lg" asChild><a href="#contact">Schedule Demo</a></Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Payers */}
+            <div className="space-y-8">
+              <div className="grid gap-12 items-center">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <HeartPulse className="w-6 h-6 text-primary" />
+                    </div>
+                    <Badge className="bg-primary/10 text-primary border-primary/20">For Payers & Health Plans</Badge>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold">Predict Risk. Engage Members. Improve Outcomes.</h3>
+                  <p className="text-lg text-muted-foreground">
+                    Deliver proactive care and stronger member relationships through real-time engagement, predictive analytics, and scalable automation.
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "Predictive risk scoring from health + behavior data",
+                      "Automated follow-up and engagement",
+                      "Customizable to your brand",
+                      "Scalable from pilot to millions of members",
+                      "Enterprise-grade data security and HIPAA compliance"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="hero" size="lg" asChild><a href="#contact">Explore Solutions</a></Button>
+                </div>
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+                  <div className="space-y-6">
+                    <div className="text-4xl font-bold text-primary">Guideline-Based Foundation</div>
+                    <p className="text-muted-foreground">Our AI follows national care guidelines — you define success metrics for your population</p>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Clinical protocols built-in</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Fully brandable platform</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Track your KPIs, your way</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                        <span className="text-sm">Scale from pilot to enterprise</span>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+
+            {/* Digital Health */}
+            <div className="space-y-8 bg-secondary/30 py-16 px-4 -mx-4 rounded-lg">
+              <div className="grid gap-12 items-center">
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+                  <div className="space-y-6">
+                    <div className="text-4xl font-bold text-primary">Weeks, Not Years</div>
+                    <p className="text-muted-foreground">Launch your connected health features without building infrastructure</p>
+                    <div className="grid gap-3">
+                      {[
+                        { label: "Device Integration", value: "Days" },
+                        { label: "AI Assistant Setup", value: "Hours" },
+                        { label: "HIPAA Compliance", value: "Built-in" }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center justify-between p-3 bg-background rounded-lg">
+                          <span className="text-sm font-medium">{item.label}</span>
+                          <Badge variant="secondary">{item.value}</Badge>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Rocket className="w-6 h-6 text-primary" />
+                    </div>
+                    <Badge className="bg-primary/10 text-primary border-primary/20">For Digital Health Companies</Badge>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold">Accelerate Your Roadmap with Plug-and-Play Infrastructure</h3>
               <p className="text-lg text-muted-foreground">
                 Skip the years of infrastructure work. Integrate our device ecosystem and AI engagement platform to launch RPM, chronic care, or lifestyle features in weeks.
               </p>
@@ -422,6 +658,8 @@ const Index = () => {
                 ))}
               </ul>
               <Button variant="hero" size="lg" asChild><a href="#contact">View API Docs</a></Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
