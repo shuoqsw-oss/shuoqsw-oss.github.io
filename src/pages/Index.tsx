@@ -38,7 +38,7 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <a href="#home" className="font-bold text-lg">CareInfra</a>
+          <a href="#home" className="font-bold text-lg">OpenWellness</a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#why" className="hover:text-primary">Why</a>
             <a href="#solution" className="hover:text-primary">Solution</a>
@@ -872,7 +872,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <p className="text-lg font-semibold">
-              CareInfra — 24/7 Virtual Care Assistant Platform — Secure, Scalable, and Human.
+              OpenWellness — 24/7 Virtual Care Assistant Platform — Secure, Scalable, and Human.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
