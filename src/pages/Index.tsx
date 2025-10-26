@@ -26,7 +26,9 @@ import {
   Briefcase,
   Rocket
 } from "lucide-react";
-import heroVideo from "@/assets/20250909-152158.mp4";
+import heroImage from "@/assets/hero-healthcare.jpg";
+import logo from "@/assets/logo-192x292.png";
+// import heroVideo from "@/assets/20250909-152158.mp4";
 import voiceDemo from "@/assets/efa48339-326cf626.mp4";
 
 const Index = () => {
@@ -38,7 +40,10 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <a href="#home" className="font-bold text-lg">OpenWellness</a>
+          <a href="#home" className="flex items-center gap-3 font-bold text-lg">
+            <img src={logo} alt="OpenWellness Logo" className="h-8 w-auto" />
+            OpenWellness
+          </a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#why" className="hover:text-primary">Why</a>
             <a href="#solution" className="hover:text-primary">Solution</a>
@@ -87,6 +92,12 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
+              <img
+                src={heroImage}
+                alt="Connected healthcare devices showing integrated health monitoring platform"
+                className="rounded-2xl shadow-strong w-full"
+              />
+              {/* Video code commented out for potential future use
               <video
                 src={heroVideo}
                 loop
@@ -95,6 +106,7 @@ const Index = () => {
                 className="rounded-2xl shadow-strong w-full"
                 aria-label="Connected healthcare devices showing integrated health monitoring platform"
               />
+              */}
             </div>
           </div>
         </div>
