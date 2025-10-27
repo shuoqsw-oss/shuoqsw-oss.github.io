@@ -63,13 +63,13 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
-                Healthcare Innovation
+                Lifestyle Medicine Innovation
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                The AI Care Infrastructure for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Connected Health</span>
+                The AI Platform for <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Lifestyle Medicine</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                From hospitals to payers to employers to digital health innovators — we deliver the devices, AI, and automation that make remote care engaging, scalable, and outcome-driven.
+                Empowering healthcare providers, employers, and wellness programs with evidence-based lifestyle interventions — nutrition, exercise, stress management, sleep optimization, and behavior change — delivered through intelligent AI coaching and connected health monitoring.
               </p>
               <div className="flex flex-wrap gap-4 items-center">
                 <Badge variant="outline" className="text-sm py-2 px-4">
@@ -117,36 +117,36 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Remote Care Works — <span className="text-primary">Until It Doesn't Scale</span>
+              Lifestyle Medicine Works — <span className="text-primary">But Implementation Fails</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Healthcare teams are overextended. Chronic conditions and aging populations are rising. Remote care should help — but most programs fail because they rely on:
+              Chronic diseases are largely preventable through lifestyle changes. Yet most healthcare programs struggle to deliver effective lifestyle interventions because they rely on:
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <Card className="p-6 space-y-4 border-destructive/20 bg-destructive/5">
                 <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                   <Users className="w-6 h-6 text-destructive" />
                 </div>
-                <h3 className="font-semibold text-lg">Manual Follow-up</h3>
-                <p className="text-sm text-muted-foreground">Staff overwhelmed with routine check-ins</p>
+                <h3 className="font-semibold text-lg">Generic Advice</h3>
+                <p className="text-sm text-muted-foreground">One-size-fits-all recommendations that don't stick</p>
               </Card>
               <Card className="p-6 space-y-4 border-destructive/20 bg-destructive/5">
                 <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                   <Smartphone className="w-6 h-6 text-destructive" />
                 </div>
-                <h3 className="font-semibold text-lg">Complex Setup</h3>
-                <p className="text-sm text-muted-foreground">Patients struggle with device configuration</p>
+                <h3 className="font-semibold text-lg">Poor Engagement</h3>
+                <p className="text-sm text-muted-foreground">Patients lose motivation without personalized support</p>
               </Card>
               <Card className="p-6 space-y-4 border-destructive/20 bg-destructive/5">
                 <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-destructive rotate-180" />
                 </div>
-                <h3 className="font-semibold text-lg">Low Engagement</h3>
-                <p className="text-sm text-muted-foreground">Programs fail to maintain patient adherence</p>
+                <h3 className="font-semibold text-lg">No Behavior Change</h3>
+                <p className="text-sm text-muted-foreground">Lack of sustained lifestyle modifications</p>
               </Card>
             </div>
             <p className="text-xl font-semibold text-foreground pt-8">
-              The result? Low adherence, high cost, and minimal impact.
+              The result? Continued disease progression, rising healthcare costs, and missed opportunities for prevention.
             </p>
           </div>
         </div>
@@ -157,13 +157,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Effortless. Intelligent. <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Compliant.</span>
+              Personalized. Evidence-Based. <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Transformative.</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              We combine plug-and-play health kits with a human-like AI assistant that personalizes feedback, predicts risk, and automates follow-up — all while ensuring HIPAA-compliant data handling and offering BAA agreements when required.
+              We deliver comprehensive lifestyle medicine interventions through AI-powered coaching that adapts to each individual's needs, preferences, and progress — covering nutrition, physical activity, stress management, sleep optimization, and sustainable behavior change.
             </p>
             <p className="text-xl font-semibold text-foreground pt-4">
-              Deliver connected care that's simple to deploy, safe to scale, and aligned with national care guidelines.
+              Transform health outcomes through science-backed lifestyle interventions that stick.
             </p>
           </div>
         </div>
@@ -174,16 +174,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              From Box to Better Health <span className="text-primary">in Minutes</span>
+              From Assessment to Transformation <span className="text-primary">in Weeks</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
             {[
-              { icon: Zap, title: "Unbox & Power On", desc: "Pre-configured, pre-paired, ready to use" },
-              { icon: Activity, title: "Auto Data Flow", desc: "Vitals stream securely to HIPAA-compliant cloud" },
-              { icon: Brain, title: "AI Engagement", desc: "Personalized coaching via voice, video, or tablet" },
-              { icon: LineChart, title: "Smart Insights", desc: "Real-time risk alerts and guideline-based summaries" },
-              { icon: Award, title: "Motivate & Reward", desc: "Patients earn points and see progress" }
+              { icon: Zap, title: "Comprehensive Assessment", desc: "Health history, lifestyle patterns, and goals evaluation" },
+              { icon: Activity, title: "Personalized Plan", desc: "Evidence-based interventions tailored to individual needs" },
+              { icon: Brain, title: "AI Lifestyle Coach", desc: "Daily guidance on nutrition, exercise, stress, and sleep" },
+              { icon: LineChart, title: "Progress Tracking", desc: "Real-time monitoring and adaptive recommendations" },
+              { icon: Award, title: "Sustainable Change", desc: "Long-term behavior modification and habit formation" }
             ].map((step, index) => (
               <Card key={index} className="p-6 space-y-4 relative">
                 <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-primary-foreground font-bold shadow-md">
@@ -682,23 +682,23 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              All the Power. <span className="text-primary">None of the Complexity.</span>
+              Complete Lifestyle Medicine <span className="text-primary">Toolkit.</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {[
-              { icon: Zap, title: "Instant Setup", desc: "Pre-configured devices that just work" },
-              { icon: Activity, title: "Seamless Connectivity", desc: "Wi-Fi or cellular, anywhere" },
-              { icon: Smartphone, title: "Integrated Kit", desc: "Tablet, BP monitor, scale, watch" },
-              { icon: Brain, title: "Human-Like AI Assistant", desc: "Text, voice, or video" },
-              { icon: HeartPulse, title: "Exercise & Movement Coaching", desc: "Real-time guidance" },
-              { icon: LineChart, title: "Risk Prediction AI", desc: "Early detection from health + behavior" },
-              { icon: TrendingUp, title: "Visual Progress Tracking", desc: "Graphs that motivate" },
-              { icon: Heart, title: "Personalized Feedback", desc: "Tailored to each care stage" },
-              { icon: Award, title: "Rewards & Gamification", desc: "Points that drive adherence" },
-              { icon: Shield, title: "HIPAA Compliant Infrastructure", desc: "Secure, privacy-first design" },
-              { icon: Lock, title: "BAA Available", desc: "Enterprise-ready for providers" },
-              { icon: CheckCircle2, title: "Guideline-Based Care", desc: "Aligned with national standards" }
+              { icon: Zap, title: "Nutrition Coaching", desc: "Personalized meal plans and dietary guidance" },
+              { icon: Activity, title: "Exercise Prescription", desc: "Tailored fitness programs and movement tracking" },
+              { icon: Smartphone, title: "Stress Management", desc: "Mindfulness, breathing, and relaxation techniques" },
+              { icon: Brain, title: "Sleep Optimization", desc: "Sleep hygiene and circadian rhythm support" },
+              { icon: HeartPulse, title: "Behavior Change", desc: "Evidence-based habit formation strategies" },
+              { icon: LineChart, title: "Health Monitoring", desc: "Continuous tracking of vital signs and biomarkers" },
+              { icon: TrendingUp, title: "Progress Analytics", desc: "Comprehensive health outcome tracking" },
+              { icon: Heart, title: "Personalized AI Coach", desc: "Adaptive guidance based on individual progress" },
+              { icon: Award, title: "Motivation System", desc: "Gamification and reward-based engagement" },
+              { icon: Shield, title: "Clinical Integration", desc: "Seamless EHR and provider communication" },
+              { icon: Lock, title: "Privacy Protection", desc: "HIPAA-compliant data security and BAA support" },
+              { icon: CheckCircle2, title: "Evidence-Based", desc: "Built on latest lifestyle medicine research" }
             ].map((feature, i) => (
               <Card key={i} className="p-6 space-y-3 hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -719,7 +719,7 @@ const Index = () => {
               aria-label="AI Assistant voice demo"
             />
             <p className="text-center text-muted-foreground">
-              Hear AI Assistant in action: natural-sounding voice, low latency, and near-instant responses.
+              Experience our AI Lifestyle Coach: personalized guidance for nutrition, exercise, stress management, and sustainable behavior change.
             </p>
           </div>
         </div>
@@ -730,16 +730,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge className="bg-primary/10 text-primary border-primary/20 text-base py-2 px-6">
-              Trusted & Proven
+              Evidence-Based Results
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Empower Better Outcomes — <span className="text-primary">Backed by Best Practices</span>
+              Transform Health Outcomes — <span className="text-primary">Through Lifestyle Medicine</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Every engagement, insight, and alert follows national clinical guidelines, empowering your organization to deliver better outcomes — safely and at scale.
+              Our platform delivers measurable improvements in chronic disease management, prevention, and overall wellness through evidence-based lifestyle interventions that address the root causes of health challenges.
             </p>
             <p className="text-xl font-semibold text-foreground pt-4">
-              Our mission: Enable you to achieve results that matter, with trust built in.
+              Our mission: Enable sustainable health transformation through personalized lifestyle medicine.
             </p>
           </div>
         </div>
@@ -750,10 +750,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <Card className="p-12 lg:p-16 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20 text-center space-y-8 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              See the Future of Connected Care
+              Transform Health Through Lifestyle Medicine
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Let's explore how our HIPAA-compliant AI Care Infrastructure can power your next stage of growth.
+              Discover how our AI-powered lifestyle medicine platform can revolutionize your approach to chronic disease prevention and management.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6" asChild>
@@ -849,12 +849,13 @@ const Index = () => {
                         <SelectValue placeholder="Select your use case" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="rpm">Remote Patient Monitoring (RPM)</SelectItem>
-                        <SelectItem value="ccm">Chronic Care Management (CCM)</SelectItem>
-                        <SelectItem value="employers">Employer Wellness / Benefits</SelectItem>
-                        <SelectItem value="payers">Payer Programs</SelectItem>
-                        <SelectItem value="digital-health">Digital Health Product</SelectItem>
-                        <SelectItem value="research">Clinical Research / Trials</SelectItem>
+                        <SelectItem value="lifestyle-medicine">Lifestyle Medicine Programs</SelectItem>
+                        <SelectItem value="chronic-disease-prevention">Chronic Disease Prevention</SelectItem>
+                        <SelectItem value="nutrition-coaching">Nutrition & Wellness Coaching</SelectItem>
+                        <SelectItem value="employer-wellness">Employer Wellness Programs</SelectItem>
+                        <SelectItem value="payer-wellness">Health Plan Wellness Initiatives</SelectItem>
+                        <SelectItem value="clinical-integration">Clinical Practice Integration</SelectItem>
+                        <SelectItem value="research">Lifestyle Medicine Research</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
@@ -884,7 +885,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <p className="text-lg font-semibold">
-              OpenWellness — 24/7 Virtual Care Assistant Platform — Secure, Scalable, and Human.
+              OpenWellness — AI-Powered Lifestyle Medicine Platform — Evidence-Based, Personalized, and Transformative.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
