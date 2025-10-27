@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { 
   Shield, 
@@ -24,10 +24,15 @@ import {
   Building2,
   HeartPulse,
   Briefcase,
-  Rocket
+  Rocket,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import heroImage from "@/assets/hero-healthcare.jpg";
 import logo from "@/assets/logo-192x292.png";
+import pic1 from "@/assets/pic1.jpg";
+import pic2 from "@/assets/pic2.jpg";
+import pic3 from "@/assets/pic3.jpg";
 // import heroVideo from "@/assets/20250909-152158.mp4";
 import voiceDemo from "@/assets/efa48339-326cf626.mp4";
 
@@ -35,6 +40,34 @@ const Index = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [usecase, setUsecase] = useState<string | undefined>(undefined);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const heroImages = [pic1, pic2, pic3];
+  
+  // Auto-rotate images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % heroImages.length
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
+  // Navigation functions
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) => 
+      (prevIndex + 1) % heroImages.length
+    );
+  };
+  
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -92,11 +125,47 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <img
-                src={heroImage}
-                alt="Connected healthcare devices showing integrated health monitoring platform"
-                className="rounded-2xl shadow-strong w-full"
-              />
+              <div className="relative overflow-hidden rounded-2xl shadow-strong group">
+                <img
+                  src={heroImages[currentImageIndex]}
+                  alt="Lifestyle Medicine Platform - AI-powered health coaching and monitoring"
+                  className="w-full h-auto transition-opacity duration-1000 ease-in-out"
+                  key={currentImageIndex}
+                />
+                
+                {/* Navigation buttons */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+                
+                {/* Image indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {heroImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? 'bg-white scale-125' 
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
               {/* Video code commented out for potential future use
               <video
                 src={heroVideo}
