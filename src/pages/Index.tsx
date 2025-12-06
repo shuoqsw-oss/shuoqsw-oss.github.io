@@ -956,6 +956,9 @@ const Index = () => {
             <p className="text-lg font-semibold">
               OpenWellness — AI-Powered Lifestyle Medicine Platform — Evidence-Based, Personalized, and Transformative.
             </p>
+            <p className="text-sm text-muted-foreground">
+              Built by <span className="font-semibold text-foreground">Care Infra LLC</span>
+            </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
@@ -970,6 +973,9 @@ const Index = () => {
                 Enterprise Ready
               </span>
             </div>
+            <p className="text-sm text-muted-foreground pt-4">
+              ©2025 Care Infra, LLC. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
