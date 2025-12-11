@@ -26,7 +26,10 @@ import {
   Briefcase,
   Rocket,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  MapPin,
+  Phone,
+  Mail
 } from "lucide-react";
 import heroImage from "@/assets/hero-healthcare.jpg";
 import logo from "@/assets/logo-192x292.png";
@@ -952,26 +955,32 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 border-t bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-6">
             <p className="text-lg font-semibold">
               OpenWellness — AI-Powered Lifestyle Medicine Platform — Evidence-Based, Personalized, and Transformative.
             </p>
             <p className="text-sm text-muted-foreground">
               Built by <span className="font-semibold text-foreground">Care Infra LLC</span>
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                HIPAA Compliant
-              </span>
-              <span className="flex items-center gap-2">
-                <Lock className="w-4 h-4" />
-                BAA Ready
-              </span>
-              <span className="flex items-center gap-2">
-                <Building2 className="w-4 h-4" />
-                Enterprise Ready
-              </span>
+            
+            {/* About Us Details */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>30 North Gould Street, STE R<br />Sheridan, WY 82801 US</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+18027661429" className="hover:text-primary transition-colors">
+                  +1 802 766 1429
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:info@openwellnesshealth.com" className="hover:text-primary transition-colors">
+                  info@openwellnesshealth.com
+                </a>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground pt-4">
               ©2025 Care Infra, LLC. All rights reserved.
