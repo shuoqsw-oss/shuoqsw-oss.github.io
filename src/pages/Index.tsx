@@ -977,8 +977,8 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:info@openwellnesshealth.com" className="hover:text-primary transition-colors">
-                  info@openwellnesshealth.com
+                <a href="mailto:shuo@openwellnesshealth.com" className="hover:text-primary transition-colors">
+                  shuo@openwellnesshealth.com
                 </a>
               </div>
             </div>
