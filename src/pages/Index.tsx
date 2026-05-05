@@ -32,7 +32,7 @@ import {
   Mail
 } from "lucide-react";
 import heroImage from "@/assets/hero-healthcare.jpg";
-import logo from "@/assets/logo-192x292.png";
+import logo from "@/assets/output-onlinepngtools.png";
 import pic1 from "@/assets/pic1.jpg";
 import pic2 from "@/assets/pic2.jpg";
 import pic3 from "@/assets/pic3.jpg";
