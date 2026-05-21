@@ -83,6 +83,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#why" className="hover:text-primary">Why</a>
             <a href="#solution" className="hover:text-primary">Solution</a>
+            <a href="#pre-order" className="hover:text-primary">Pre-Order</a>
             <a href="#how" className="hover:text-primary">How It Works</a>
             <a href="#who-we-serve" className="hover:text-primary">Who We Serve</a>
             <a href="#features" className="hover:text-primary">Features</a>
@@ -236,6 +237,39 @@ const Index = () => {
             <p className="text-xl font-semibold text-foreground pt-4">
               Transform health outcomes through science-backed lifestyle interventions that stick.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pre-Order Section */}
+      <section id="pre-order" className="py-20 lg:py-32 bg-gradient-to-b from-primary/10 to-background scroll-mt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <Badge className="bg-primary/10 text-primary border-primary/20">
+              Pre-Order
+            </Badge>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              Reserve early access to OpenWellness
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Pre-order today to secure priority onboarding, pilot pricing, and first access to our AI-powered lifestyle medicine platform.
+            </p>
+            <div className="rounded-3xl border border-border/60 bg-muted/20 p-8 shadow-sm max-w-2xl mx-auto text-left">
+              <h3 className="text-xl font-semibold text-foreground mb-3">What’s included</h3>
+              <ul className="space-y-3 text-muted-foreground list-disc list-inside">
+                <li>Early platform access and onboarding priority</li>
+                <li>Exclusive pilot pricing and implementation support</li>
+                <li>Priority access to new integrations</li>
+              </ul>
+            </div>
+            <div className="flex justify-center">
+              <div
+                className="w-full max-w-xs"
+                dangerouslySetInnerHTML={{
+                  __html: `<stripe-buy-button buy-button-id="buy_btn_1TZWuWD7q4PwFRLxc9HjZKTw" publishable-key="pk_live_51SdBz3D7q4PwFRLxl09SLUpEXWWRGVs5TpzPub4Cwdq3uoIAkbNO0qxvJE563s6GPHj0NQw0W5TTqsivIHwr0BU400Hd9JIMrH" class="w-full min-h-[100px]"></stripe-buy-button>`
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
