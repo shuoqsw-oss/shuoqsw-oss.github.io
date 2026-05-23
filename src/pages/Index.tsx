@@ -252,14 +252,17 @@ const Index = () => {
               Reserve early access to OpenWellness
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Pre-order today to secure priority onboarding, pilot pricing, and first access to our AI-powered lifestyle medicine platform.
+              Pre-order today to secure priority onboarding, pilot pricing, and first access to our AI-powered lifestyle App.
             </p>
             <div className="rounded-3xl border border-border/60 bg-muted/20 p-8 shadow-sm max-w-2xl mx-auto text-left">
               <h3 className="text-xl font-semibold text-foreground mb-3">What’s included</h3>
               <ul className="space-y-3 text-muted-foreground list-disc list-inside">
-                <li>Early platform access and onboarding priority</li>
-                <li>Exclusive pilot pricing and implementation support</li>
-                <li>Priority access to new integrations</li>
+                <li>Early access before launch</li>
+                <li>Founding user perks & discounted pricing</li>
+                <li>Priority feature access</li>
+                <li>Direct input on future product updates</li>
+                <li>Private beta community access</li>
+                <li>Refund guaranteed if it’s not for you</li>
               </ul>
             </div>
             <div className="flex justify-center">
