@@ -37,7 +37,7 @@ const sections = [
     paragraphs: [
       "Paid features may be available through subscriptions purchased using Apple’s in-app purchase system. Before you confirm a purchase, the purchase screen displays the subscription name, included features, duration, price and currency, and any trial or introductory offer terms. The price and period shown when you confirm apply to your purchase. Payment is charged to your Apple Account when you confirm, except where a trial or other offer delays payment.",
       "Auto-renewable subscriptions renew for the selected period unless canceled at least 24 hours before the current period ends. Apple charges your account for renewal within the 24 hours before the next period begins at the applicable renewal price. Apple handles price-change notifications and any required consent under its rules and applicable law.",
-      "You can manage or cancel a subscription in Settings on your Apple device: select your name, then Subscriptions, then OpenWellness. You can also use Apple’s subscription management link below. Cancellation stops future renewals; paid access generally continues through the current paid period. Deleting your account or uninstalling the App does not cancel your subscription.",
+      "You can manage or cancel a subscription in Settings on your Apple device: select your name, then Subscriptions, then OpenWellness. Cancellation stops future renewals; paid access generally continues through the current paid period. Deleting your account or uninstalling the App does not cancel your subscription.",
       "If a free trial or introductory offer is available, its duration, eligibility, and subsequent price are shown before purchase. A trial converts to a paid subscription unless canceled at least 24 hours before it ends. Any unused portion of a free trial is forfeited when you purchase a subscription to that product, where applicable under Apple’s offer terms.",
       "Apple processes billing and refund requests for App Store purchases. You may request a refund through reportaproblem.apple.com; eligibility is determined under Apple’s policies and applicable law. These Terms do not restrict statutory refund rights. Eligible purchases can be restored on supported devices using the same Apple Account and the App’s restore-purchases function. Contact us if access is missing after restoration.",
     ],
@@ -112,19 +112,6 @@ const TermsOfService = () => (
               {paragraphs.map((paragraph) => (
                 <p key={paragraph} className="leading-relaxed text-muted-foreground">{paragraph}</p>
               ))}
-              {title.startsWith("4.") && (
-                <p className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
-                  <a className="underline" href="https://play.google.com/store/account/subscriptions">Manage Google Play subscriptions</a>
-                  <a className="underline" href="https://support.google.com/googleplay/answer/2479637">Google Play refund help</a>
-                </p>
-              )}
-              {title.startsWith("5.") && (
-                <p className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
-                  <a className="underline" href="https://apps.apple.com/account/subscriptions">Manage Apple subscriptions</a>
-                  <a className="underline" href="https://reportaproblem.apple.com/">Request an Apple refund</a>
-                  <a className="underline" href="https://www.apple.com/legal/internet-services/itunes/us/terms.html">Apple Media Services Terms</a>
-                </p>
-              )}
               {title.startsWith("7.") && <a className="inline-block underline text-muted-foreground" href="/privacy-policy">Read our Privacy Policy</a>}
             </section>
           ))}
