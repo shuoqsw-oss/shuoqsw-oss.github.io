@@ -6,8 +6,8 @@ const sections = [
   {
     title: "1. Agreement and Services",
     paragraphs: [
-      'These Terms of Service and End User License Agreement ("Terms" or "EULA") govern your use of the OpenWellness website, mobile applications (the "App"), and related services provided by Care Infra LLC ("we", "us", or "Company"). By using the services, you agree to these Terms. If you do not agree, do not use the services.',
-      "This agreement is between you and Care Infra LLC, not Apple. We are responsible for the App and its content. For an App downloaded from Apple’s App Store, the Apple-specific provisions below apply. These Terms do not override Apple Media Services usage rules.",
+      'These Terms of Service and End User License Agreement ("Terms" or "EULA") govern your use of the OpenWellness website, iOS and Android applications, other supported applications (collectively, the "App"), and related services provided by Care Infra LLC ("we", "us", or "Company"). By using the services, you agree to these Terms. If you do not agree, do not use the services.',
+      "This agreement is between you and Care Infra LLC. We are responsible for the App and its content. These Terms apply across supported platforms. Platform-specific provisions apply only when you obtain the App or purchase a subscription through that platform. The additional Apple App Store terms in Section 10 apply only to the App Store version.",
     ],
   },
   {
@@ -19,12 +19,21 @@ const sections = [
   {
     title: "3. License and Ownership",
     paragraphs: [
-      "We license the App to you; ownership remains with us and our licensors. Your Apple App license is nontransferable, applies to Apple-branded devices you own or control, and follows Apple Media Services usage rules, including permitted Family Sharing and volume-purchase access.",
+      "Subject to these Terms, we grant you a limited, nonexclusive, nontransferable license to install and use the App on compatible devices you own or control, including supported Android devices, and to access our website and related services for your personal, noncommercial use. This license covers updates and paid features you are entitled to access, subject to any additional terms disclosed for those features. Ownership remains with us and our licensors. For the App Store version, this license is subject to Section 10.",
       "Do not resell, sublicense, copy, modify, or reverse engineer the App except where applicable law or an open-source license permits it. You retain ownership of content you provide and authorize us to process it to operate and deliver the services as described in our Privacy Policy.",
     ],
   },
   {
-    title: "4. Apple In-App Subscriptions",
+    title: "4. Subscriptions and Payments",
+    paragraphs: [
+      "Paid services may be offered through Apple in-app purchase, Google Play, our website, or another supported purchase channel, where available. Availability, features, and purchase options may vary by platform. Before you confirm a purchase, we disclose the included features, price, billing period, renewal terms, and any trial or introductory offer. Auto-renewable subscriptions continue until canceled through the channel where you purchased them, subject to its disclosed terms and applicable law.",
+      "Google Play purchases, where offered: Google processes payment under its purchase terms. Manage or cancel through Google Play using the Google Account used for the purchase: open Payments & subscriptions, then Subscriptions, select OpenWellness, and follow the cancellation steps. Cancel before the next renewal to avoid another charge. Access generally continues for the period already paid. Refund requests follow Google Play’s refund process and applicable law; contact us for purchase support.",
+      "Website and other purchases, where offered: the checkout identifies the seller or payment provider, price, billing schedule, renewal and cancellation terms, and any applicable refund policy. Manage the subscription using the account or billing link provided at purchase, or contact us for help. Mandatory consumer rights apply regardless of the purchase channel.",
+      "Deleting an account or uninstalling the App does not cancel a subscription. Cancel through the original purchase channel. Purchase availability on a platform does not by itself promise access on every other platform; the access included in your plan is disclosed before purchase.",
+    ],
+  },
+  {
+    title: "5. Apple In-App Subscriptions",
     paragraphs: [
       "Paid features may be available through subscriptions purchased using Apple’s in-app purchase system. Before you confirm a purchase, the purchase screen displays the subscription name, included features, duration, price and currency, and any trial or introductory offer terms. The price and period shown when you confirm apply to your purchase. Payment is charged to your Apple Account when you confirm, except where a trial or other offer delays payment.",
       "Auto-renewable subscriptions renew for the selected period unless canceled at least 24 hours before the current period ends. Apple charges your account for renewal within the 24 hours before the next period begins at the applicable renewal price. Apple handles price-change notifications and any required consent under its rules and applicable law.",
@@ -34,29 +43,28 @@ const sections = [
     ],
   },
   {
-    title: "5. Wellness Information",
+    title: "6. Wellness Information",
     paragraphs: [
       "The App provides general wellness education and support, including AI-generated information that may contain errors. It does not replace professional medical advice, diagnosis, or treatment. Consult a qualified healthcare professional about medical decisions and before changing treatment, medication, diet, or exercise. Do not delay seeking care because of information in the App. The App is not an emergency service; contact local emergency services for urgent help.",
     ],
   },
   {
-    title: "6. Privacy",
+    title: "7. Privacy",
     paragraphs: [
       "Our Privacy Policy describes how we handle personal information, including health information and subscription transaction data. Device permissions and consent choices control optional data access. Contact us with privacy or deletion requests using the details below.",
     ],
   },
   {
-    title: "7. Maintenance and Support",
+    title: "8. Maintenance and Support",
     paragraphs: [
-      "Care Infra LLC provides required App maintenance and support. Apple has no support or maintenance obligation. Direct questions, complaints, and claims to us using the contact information below.",
+      "Care Infra LLC provides maintenance and support for our services across supported platforms as required by law or expressly offered by us. Direct questions, complaints, and claims to us using the contact information below.",
     ],
   },
   {
-    title: "8. Warranties and Responsibility for Claims",
+    title: "9. Warranties and Responsibility for Claims",
     paragraphs: [
       "To the extent permitted by law, services are provided as available, without promises of uninterrupted operation, error-free information, or particular wellness results. We disclaim implied warranties of merchantability and fitness for a particular purpose only where lawful. Mandatory consumer protections remain in effect.",
-      "We are responsible for warranties not lawfully excluded. If the App breaches an applicable warranty, notify Apple for a refund of its purchase price. Apple has no further warranty duties where law permits; we bear other resulting claims, losses, liabilities, damages, costs, and expenses.",
-      "Care Infra LLC handles product liability, regulatory, consumer, and privacy claims concerning the App, including HealthKit or HomeKit claims if applicable. For third-party intellectual-property infringement claims involving the App or your use, we handle investigation, defense, settlement, and discharge; Apple does not.",
+      "Care Infra LLC handles product liability, regulatory, consumer, and privacy claims concerning our services. We are responsible for the investigation, defense, settlement, and discharge of third-party intellectual-property infringement claims concerning the App or your possession and use of it.",
       "Nothing in these Terms excludes or limits our liability beyond what applicable law permits, including liability that cannot legally be excluded or limited.",
     ],
   },
@@ -67,16 +75,20 @@ const sections = [
     ],
   },
   {
-    title: "10. Apple’s Third-Party Beneficiary Rights",
+    title: "10. Additional Apple App Store Terms",
     paragraphs: [
+      "This section applies only to the App obtained through Apple’s App Store. The EULA is between you and Care Infra LLC, not Apple; we are solely responsible for the App and its content. Apple has no obligation to maintain or support the App.",
+      "Your App Store license is nontransferable and allows use on Apple-branded devices you own or control, as permitted by Apple Media Services usage rules, including permitted Family Sharing and volume purchasing. These Terms do not conflict with those usage rules.",
+      "We are responsible for warranties not lawfully excluded. If the App breaches an applicable warranty, notify Apple for a refund of its purchase price. Apple has no further warranty duties where law permits; we bear other resulting claims, losses, liabilities, damages, costs, and expenses.",
+      "We, rather than Apple, address App-related product liability, regulatory, consumer protection, privacy, and similar claims, including HealthKit and HomeKit claims where applicable. We, rather than Apple, are solely responsible for investigating, defending, settling, and discharging third-party intellectual-property infringement claims relating to the App or your possession and use of it.",
       "Apple and its subsidiaries are third-party beneficiaries of this EULA. Upon your acceptance, Apple may enforce it against you and is deemed to accept that right.",
     ],
   },
   {
     title: "11. Ending Use and Changes",
     paragraphs: [
-      "You may stop using the services at any time and request account deletion. We may suspend or terminate access for material violations or when required by law. Any such action remains subject to your mandatory consumer rights. Manage Apple subscriptions separately as described above.",
-      "We may update these Terms and will post the revised effective date. We will provide notice of material changes and obtain agreement where required by law. Changes do not remove rights that have already accrued or alter an existing paid subscription’s price or duration without the process required by Apple and applicable law. If a provision is unenforceable, the remaining provisions continue to apply.",
+      "You may stop using the services at any time and request account deletion. We may suspend or terminate access for material violations or when required by law. Any such action remains subject to your mandatory consumer rights. Manage subscriptions separately through the original purchase channel as described above.",
+      "We may update these Terms and will post the revised effective date. We will provide notice of material changes and obtain agreement where required by law. Changes do not remove rights that have already accrued or alter an existing paid subscription’s price or duration without the process required by the applicable purchase channel and law. If a provision is unenforceable, the remaining provisions continue to apply.",
     ],
   },
 ];
@@ -102,12 +114,18 @@ const TermsOfService = () => (
               ))}
               {title.startsWith("4.") && (
                 <p className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
+                  <a className="underline" href="https://play.google.com/store/account/subscriptions">Manage Google Play subscriptions</a>
+                  <a className="underline" href="https://support.google.com/googleplay/answer/2479637">Google Play refund help</a>
+                </p>
+              )}
+              {title.startsWith("5.") && (
+                <p className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
                   <a className="underline" href="https://apps.apple.com/account/subscriptions">Manage Apple subscriptions</a>
                   <a className="underline" href="https://reportaproblem.apple.com/">Request an Apple refund</a>
                   <a className="underline" href="https://www.apple.com/legal/internet-services/itunes/us/terms.html">Apple Media Services Terms</a>
                 </p>
               )}
-              {title.startsWith("6.") && <a className="inline-block underline text-muted-foreground" href="/privacy-policy">Read our Privacy Policy</a>}
+              {title.startsWith("7.") && <a className="inline-block underline text-muted-foreground" href="/privacy-policy">Read our Privacy Policy</a>}
             </section>
           ))}
           <section className="space-y-4">
