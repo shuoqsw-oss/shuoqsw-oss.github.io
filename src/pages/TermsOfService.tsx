@@ -19,7 +19,7 @@ const sections = [
   {
     title: "3. License and Ownership",
     paragraphs: [
-      "Subject to these Terms, we grant you a limited, nonexclusive, nontransferable license to install and use the App on compatible devices you own or control, including supported Android devices, and to access our website and related services for your personal, noncommercial use. This license covers updates and paid features you are entitled to access, subject to any additional terms disclosed for those features. Ownership remains with us and our licensors. For the App Store version, this license is subject to Section 10.",
+      "Subject to these Terms, we grant you a limited, nonexclusive, nontransferable license to install and use the App on compatible devices you own or control, and to access our website and related services for your personal, noncommercial use. This license covers updates and paid features you are entitled to access, subject to any additional terms disclosed for those features. Ownership remains with us and our licensors. For the App Store version, this license is subject to Section 10.",
       "Do not resell, sublicense, copy, modify, or reverse engineer the App except where applicable law or an open-source license permits it. You retain ownership of content you provide and authorize us to process it to operate and deliver the services as described in our Privacy Policy.",
     ],
   },
