@@ -1,0 +1,132 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ChevronLeft } from "lucide-react";
+
+const sections = [
+  {
+    title: "1. Agreement and Services",
+    paragraphs: [
+      'These Terms of Service and End User License Agreement ("Terms" or "EULA") govern your use of the OpenWellness website, mobile applications (the "App"), and related services provided by Care Infra LLC ("we", "us", or "Company"). By using the services, you agree to these Terms. If you do not agree, do not use the services.',
+      "This agreement is between you and Care Infra LLC, not Apple. We are responsible for the App and its content. For an App downloaded from Apple’s App Store, the Apple-specific provisions below apply. These Terms do not override Apple Media Services usage rules.",
+    ],
+  },
+  {
+    title: "2. Accounts and Acceptable Use",
+    paragraphs: [
+      "You must have legal capacity to accept these Terms or your parent or guardian’s permission and supervision where permitted by law. Provide accurate account information, protect your login credentials, and promptly report unauthorized access. Do not use the services unlawfully, interfere with security or other users, upload content you have no right to share, or misrepresent your identity.",
+    ],
+  },
+  {
+    title: "3. License and Ownership",
+    paragraphs: [
+      "We license the App to you; ownership remains with us and our licensors. Your Apple App license is nontransferable, applies to Apple-branded devices you own or control, and follows Apple Media Services usage rules, including permitted Family Sharing and volume-purchase access.",
+      "Do not resell, sublicense, copy, modify, or reverse engineer the App except where applicable law or an open-source license permits it. You retain ownership of content you provide and authorize us to process it to operate and deliver the services as described in our Privacy Policy.",
+    ],
+  },
+  {
+    title: "4. Apple In-App Subscriptions",
+    paragraphs: [
+      "Paid features may be available through subscriptions purchased using Apple’s in-app purchase system. Before you confirm a purchase, the purchase screen displays the subscription name, included features, duration, price and currency, and any trial or introductory offer terms. The price and period shown when you confirm apply to your purchase. Payment is charged to your Apple Account when you confirm, except where a trial or other offer delays payment.",
+      "Auto-renewable subscriptions renew for the selected period unless canceled at least 24 hours before the current period ends. Apple charges your account for renewal within the 24 hours before the next period begins at the applicable renewal price. Apple handles price-change notifications and any required consent under its rules and applicable law.",
+      "You can manage or cancel a subscription in Settings on your Apple device: select your name, then Subscriptions, then OpenWellness. You can also use Apple’s subscription management link below. Cancellation stops future renewals; paid access generally continues through the current paid period. Deleting your account or uninstalling the App does not cancel your subscription.",
+      "If a free trial or introductory offer is available, its duration, eligibility, and subsequent price are shown before purchase. A trial converts to a paid subscription unless canceled at least 24 hours before it ends. Any unused portion of a free trial is forfeited when you purchase a subscription to that product, where applicable under Apple’s offer terms.",
+      "Apple processes billing and refund requests for App Store purchases. You may request a refund through reportaproblem.apple.com; eligibility is determined under Apple’s policies and applicable law. These Terms do not restrict statutory refund rights. Eligible purchases can be restored on supported devices using the same Apple Account and the App’s restore-purchases function. Contact us if access is missing after restoration.",
+    ],
+  },
+  {
+    title: "5. Wellness Information",
+    paragraphs: [
+      "The App provides general wellness education and support, including AI-generated information that may contain errors. It does not replace professional medical advice, diagnosis, or treatment. Consult a qualified healthcare professional about medical decisions and before changing treatment, medication, diet, or exercise. Do not delay seeking care because of information in the App. The App is not an emergency service; contact local emergency services for urgent help.",
+    ],
+  },
+  {
+    title: "6. Privacy",
+    paragraphs: [
+      "Our Privacy Policy describes how we handle personal information, including health information and subscription transaction data. Device permissions and consent choices control optional data access. Contact us with privacy or deletion requests using the details below.",
+    ],
+  },
+  {
+    title: "7. Maintenance and Support",
+    paragraphs: [
+      "Care Infra LLC provides required App maintenance and support. Apple has no support or maintenance obligation. Direct questions, complaints, and claims to us using the contact information below.",
+    ],
+  },
+  {
+    title: "8. Warranties and Responsibility for Claims",
+    paragraphs: [
+      "To the extent permitted by law, services are provided as available, without promises of uninterrupted operation, error-free information, or particular wellness results. We disclaim implied warranties of merchantability and fitness for a particular purpose only where lawful. Mandatory consumer protections remain in effect.",
+      "We are responsible for warranties not lawfully excluded. If the App breaches an applicable warranty, notify Apple for a refund of its purchase price. Apple has no further warranty duties where law permits; we bear other resulting claims, losses, liabilities, damages, costs, and expenses.",
+      "Care Infra LLC handles product liability, regulatory, consumer, and privacy claims concerning the App, including HealthKit or HomeKit claims if applicable. For third-party intellectual-property infringement claims involving the App or your use, we handle investigation, defense, settlement, and discharge; Apple does not.",
+      "Nothing in these Terms excludes or limits our liability beyond what applicable law permits, including liability that cannot legally be excluded or limited.",
+    ],
+  },
+  {
+    title: "9. Legal Compliance and Third-Party Terms",
+    paragraphs: [
+      "You represent that you are neither in a U.S.-embargoed or U.S.-designated terrorist-supporting country nor on a U.S. prohibited or restricted-party list. Follow applicable third-party agreements, including your wireless service agreement, when using the App.",
+    ],
+  },
+  {
+    title: "10. Apple’s Third-Party Beneficiary Rights",
+    paragraphs: [
+      "Apple and its subsidiaries are third-party beneficiaries of this EULA. Upon your acceptance, Apple may enforce it against you and is deemed to accept that right.",
+    ],
+  },
+  {
+    title: "11. Ending Use and Changes",
+    paragraphs: [
+      "You may stop using the services at any time and request account deletion. We may suspend or terminate access for material violations or when required by law. Any such action remains subject to your mandatory consumer rights. Manage Apple subscriptions separately as described above.",
+      "We may update these Terms and will post the revised effective date. We will provide notice of material changes and obtain agreement where required by law. Changes do not remove rights that have already accrued or alter an existing paid subscription’s price or duration without the process required by Apple and applicable law. If a provision is unenforceable, the remaining provisions continue to apply.",
+    ],
+  },
+];
+
+const TermsOfService = () => (
+  <div className="min-h-screen bg-background">
+    <div className="container mx-auto px-4 py-8">
+      <Button variant="ghost" size="sm" asChild className="mb-8">
+        <a href="/"><ChevronLeft className="w-4 h-4 mr-2" />Back to Home</a>
+      </Button>
+      <div className="max-w-4xl mx-auto space-y-8">
+        <header className="space-y-4">
+          <h1 className="text-4xl font-bold">Terms of Service</h1>
+          <p className="text-lg text-muted-foreground">End User License Agreement (EULA)</p>
+          <p className="text-muted-foreground">Effective Date: November 24, 2026</p>
+        </header>
+        <Card className="p-5 sm:p-8 space-y-6">
+          {sections.map(({ title, paragraphs }) => (
+            <section key={title} className="space-y-4">
+              <h2 className="text-2xl font-semibold">{title}</h2>
+              {paragraphs.map((paragraph) => (
+                <p key={paragraph} className="leading-relaxed text-muted-foreground">{paragraph}</p>
+              ))}
+              {title.startsWith("4.") && (
+                <p className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
+                  <a className="underline" href="https://apps.apple.com/account/subscriptions">Manage Apple subscriptions</a>
+                  <a className="underline" href="https://reportaproblem.apple.com/">Request an Apple refund</a>
+                  <a className="underline" href="https://www.apple.com/legal/internet-services/itunes/us/terms.html">Apple Media Services Terms</a>
+                </p>
+              )}
+              {title.startsWith("6.") && <a className="inline-block underline text-muted-foreground" href="/privacy-policy">Read our Privacy Policy</a>}
+            </section>
+          ))}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">12. Developer Contact</h2>
+            <address className="not-italic leading-relaxed text-muted-foreground">
+              Care Infra LLC<br />
+              30 North Gould Street, STE R<br />
+              Sheridan, WY 82801 US<br />
+              Phone: <a className="underline" href="tel:+18027661429">+1 802 766 1429</a><br />
+              Email: <a className="underline break-all" href="mailto:info@openwellnesshealth.com">info@openwellnesshealth.com</a>
+            </address>
+          </section>
+        </Card>
+        <nav aria-label="Legal" className="text-center text-muted-foreground">
+          <a href="/privacy-policy" className="underline">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+);
+
+export default TermsOfService;

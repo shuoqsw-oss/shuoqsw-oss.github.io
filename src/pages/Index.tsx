@@ -111,7 +111,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-4 items-center">
                 <Badge variant="outline" className="text-sm py-2 px-4">
                   <Shield className="w-4 h-4 mr-2" />
-                  HIPAA Compliant
+                  HIPAA-Grade Security
                 </Badge>
                 <Badge variant="outline" className="text-sm py-2 px-4">
                   <Lock className="w-4 h-4 mr-2" />
@@ -358,7 +358,7 @@ const Index = () => {
                       {[
                         "Chronic care kits for high-risk groups",
                         "Personalized feedback & rewards",
-                        "HIPAA-compliant platform with de-identified insights",
+                        "HIPAA-grade security and de-identified insights",
                         "90-day pilot programs with measurable engagement ROI"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
@@ -438,7 +438,7 @@ const Index = () => {
                         "Rapid deployment with pre-paired kits",
                         "AI-driven triage & risk prediction",
                         "Seamless EHR integration",
-                        "HIPAA compliant + BAA available on request"
+                        "HIPAA-grade security + BAA available on request"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -471,7 +471,7 @@ const Index = () => {
                         "Automated follow-up and engagement",
                         "Customizable to your brand",
                         "Scalable from pilot to millions of members",
-                        "Enterprise-grade data security and HIPAA compliance"
+                        "HIPAA-grade security for enterprise data"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -519,7 +519,7 @@ const Index = () => {
                         {[
                           { label: "Device Integration", value: "Days" },
                           { label: "AI Assistant Setup", value: "Hours" },
-                          { label: "HIPAA Compliance", value: "Built-in" }
+                          { label: "HIPAA-Grade Security", value: "Built-in" }
                         ].map((item, i) => (
                           <div key={i} className="flex items-center justify-between p-3 bg-background rounded-lg">
                             <span className="text-sm font-medium">{item.label}</span>
@@ -546,7 +546,7 @@ const Index = () => {
                         "Voice, video, or chat AI engagement",
                         "Exercise tracking and movement feedback",
                         "Developer-friendly APIs",
-                        "HIPAA compliant with optional BAA for customers"
+                        "HIPAA-grade security with optional BAA for customers"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -581,7 +581,7 @@ const Index = () => {
                     {[
                       "Chronic care kits for high-risk groups",
                       "Personalized feedback & rewards",
-                      "HIPAA-compliant platform with de-identified insights",
+                      "HIPAA-grade security and de-identified insights",
                       "90-day pilot programs with measurable engagement ROI"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
@@ -661,7 +661,7 @@ const Index = () => {
                       "Rapid deployment with pre-paired kits",
                       "AI-driven triage & risk prediction",
                       "Seamless EHR integration",
-                      "HIPAA compliant + BAA available on request"
+                      "HIPAA-grade security + BAA available on request"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -694,7 +694,7 @@ const Index = () => {
                       "Automated follow-up and engagement",
                       "Customizable to your brand",
                       "Scalable from pilot to millions of members",
-                      "Enterprise-grade data security and HIPAA compliance"
+                      "HIPAA-grade security for enterprise data"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -742,7 +742,7 @@ const Index = () => {
                       {[
                         { label: "Device Integration", value: "Days" },
                         { label: "AI Assistant Setup", value: "Hours" },
-                        { label: "HIPAA Compliance", value: "Built-in" }
+                        { label: "HIPAA-Grade Security", value: "Built-in" }
                       ].map((item, i) => (
                         <div key={i} className="flex items-center justify-between p-3 bg-background rounded-lg">
                           <span className="text-sm font-medium">{item.label}</span>
@@ -769,7 +769,7 @@ const Index = () => {
                       "Voice, video, or chat AI engagement",
                       "Exercise tracking and movement feedback",
                       "Developer-friendly APIs",
-                      "HIPAA compliant with optional BAA for customers"
+                      "HIPAA-grade security with optional BAA for customers"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -805,7 +805,7 @@ const Index = () => {
               { icon: Heart, title: "Personalized AI Coach", desc: "Adaptive guidance based on individual progress" },
               { icon: Award, title: "Motivation System", desc: "Gamification and reward-based engagement" },
               { icon: Shield, title: "Clinical Integration", desc: "Seamless EHR and provider communication" },
-              { icon: Lock, title: "Privacy Protection", desc: "HIPAA-compliant data security and BAA support" },
+              { icon: Lock, title: "Privacy Protection", desc: "HIPAA-grade data security and BAA support" },
               { icon: CheckCircle2, title: "Evidence-Based", desc: "Built on latest lifestyle medicine research" }
             ].map((feature, i) => (
               <Card key={i} className="p-6 space-y-3 hover:shadow-lg transition-shadow">
@@ -1019,7 +1019,7 @@ const Index = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground pt-4">
-              ©2025 Care Infra, LLC. All rights reserved. • <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a>
+              ©2026 Care Infra, LLC. All rights reserved. • <a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a> • <a href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</a>
             </p>
           </div>
         </div>

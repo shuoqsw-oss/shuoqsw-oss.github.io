@@ -16,45 +16,46 @@ const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold">Privacy Policy</h1>
-            <p className="text-muted-foreground">Effective Date: January 1, 2024</p>
+            <p className="text-muted-foreground">Effective Date: November 24, 2026</p>
           </div>
 
-          <Card className="p-8 space-y-6">
+          <Card className="p-5 sm:p-8 space-y-6">
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold">1. Introduction</h2>
               <p className="leading-relaxed text-muted-foreground">
-                Care Infra LLC ("Company", "we", "us", or "our") respects the privacy of our users ("user" or "you"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our healthcare platform services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                Care Infra LLC ("Company", "we", "us", or "our") respects the privacy of our users ("user" or "you"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, OpenWellness mobile applications, and related wellness platform services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not use our website or apps.
               </p>
             </section>
 
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold">2. Information We Collect</h2>
               <p className="leading-relaxed text-muted-foreground">
-                We collect information that you voluntarily provide to us when you register on the website, express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise when you contact us.
+                We collect information that you voluntarily provide to us when you register on our website or in our apps, express an interest in obtaining information about us or our products and services, when you participate in activities on our platform, or otherwise when you contact us.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                 <li>Personal Data: Personally identifiable information, such as your name, shipping address, email address, and telephone number.</li>
-                <li>Health Data: Information related to your physical or mental health, personal health information (PHI), and wellness goals that you choose to share with us.</li>
-                <li>Derivative Data: Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site.</li>
+                <li>Health Data: Information related to your physical or mental health, health history, and wellness goals that you choose to share with us.</li>
+                <li>Purchase Data: For Apple in-app subscriptions, Apple processes payment. We may receive transaction identifiers, purchase and renewal dates, the purchased product, and subscription status to verify access and support purchases. We do not receive your full payment card details from Apple.</li>
+                <li>Derivative Data: Information our servers automatically collect when you access our website or apps, such as your IP address, your browser type, your operating system, your access times, and the pages or screens you view.</li>
               </ul>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold">3. HIPAA Compliance</h2>
+              <h2 className="text-2xl font-semibold">3. HIPAA-Grade Security</h2>
               <p className="leading-relaxed text-muted-foreground">
-                As a provider of healthcare technology services, we are committed to maintaining the privacy and security of Protected Health Information (PHI) in compliance with the Health Insurance Portability and Accountability Act (HIPAA). We implement appropriate physical, technical, and administrative safeguards to protect PHI.
+                We use HIPAA-grade security safeguards designed to protect your personal and health information, including administrative, technical, and physical measures. “HIPAA-grade security” describes our approach to security; it is not a claim of HIPAA certification or compliance. No method of transmission or storage is completely secure.
               </p>
             </section>
 
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold">4. How We Use Your Information</h2>
               <p className="leading-relaxed text-muted-foreground">
-                We use personal information collected via our Site for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.
+                We use personal information collected through our website and apps for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                 <li>To facilitate account creation and logon process.</li>
                 <li>To send you administrative information.</li>
-                <li>To fulfill and manage your orders.</li>
+                <li>To fulfill and manage your orders, verify subscription purchases, and provide access to paid features.</li>
                 <li>To deliver and facilitate delivery of services to the user.</li>
                 <li>To respond to user inquiries/offer support to users.</li>
               </ul>
@@ -66,14 +67,31 @@ const PrivacyPolicy = () => {
                 We may share information we have collected about you in certain situations. Your information may be disclosed as follows:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                <li>By Law or to Protect Rights.</li>
-                <li>Business Transfers.</li>
-                <li>Third-Party Service Providers.</li>
+                <li>Legal requirements and protection of rights: when required by law or reasonably necessary to protect users, safety, or legal rights.</li>
+                <li>Business transfers: in connection with a merger, acquisition, or sale, subject to applicable privacy obligations.</li>
+                <li>Service providers: providers that help us operate the platform, deliver services, and support purchases. Providers receiving personal data are required to protect it to the same or an equal standard as this policy and applicable requirements, and to use it only for authorized purposes.</li>
               </ul>
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold">6. Contact Us</h2>
+              <h2 className="text-2xl font-semibold">6. Retention, Deletion, and Your Choices</h2>
+              <p className="leading-relaxed text-muted-foreground">
+                We retain personal information for as long as needed to provide our services and for legitimate legal, security, accounting, and dispute-resolution purposes. Retention depends on the type of information, your account status, and applicable obligations. When information is no longer needed, we delete it or de-identify it; backup copies are removed through our backup retention cycle.
+              </p>
+              <p className="leading-relaxed text-muted-foreground">
+                To request access, correction, account deletion, or deletion of your personal information, or to withdraw consent, contact info@openwellnesshealth.com. We may verify your identity before processing a request. We will explain any information we must retain and why. You can also revoke optional device permissions in your device settings; this stops future access through those permissions but does not delete information already collected. Deleting an account or uninstalling the app does not cancel an Apple subscription; manage it in your Apple Account subscription settings.
+              </p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold">7. Changes to This Policy</h2>
+              <p className="leading-relaxed text-muted-foreground">
+                We may update this policy as our services change. We will post the updated policy and effective date on this page and provide additional notice or seek consent when required by law.
+              </p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold">8. Contact Us</h2>
               <p className="leading-relaxed text-muted-foreground">
                 If you have questions or comments about this Privacy Policy, please contact us at:
               </p>
@@ -82,10 +100,13 @@ const PrivacyPolicy = () => {
                 30 North Gould Street, STE R<br />
                 Sheridan, WY 82801 US<br />
                 Phone: +1 802 766 1429<br />
-                Email: info@openwellnesshealth.com
+                Email: <a className="underline break-all" href="mailto:info@openwellnesshealth.com">info@openwellnesshealth.com</a>
               </address>
             </section>
           </Card>
+          <nav aria-label="Legal" className="text-center text-muted-foreground">
+            <a href="/terms-of-service" className="underline">Terms of Service &amp; EULA</a>
+          </nav>
         </div>
       </div>
     </div>
