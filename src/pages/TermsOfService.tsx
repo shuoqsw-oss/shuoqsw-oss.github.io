@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChevronLeft } from "lucide-react";
 
 const sections = [
   {
@@ -96,9 +94,6 @@ const sections = [
 const TermsOfService = () => (
   <div className="min-h-screen bg-background">
     <div className="container mx-auto px-4 py-8">
-      <Button variant="ghost" size="sm" asChild className="mb-8">
-        <a href="/"><ChevronLeft className="w-4 h-4 mr-2" />Back to Home</a>
-      </Button>
       <div className="max-w-4xl mx-auto space-y-8">
         <header className="space-y-4">
           <h1 className="text-4xl font-bold">Terms of Service</h1>
@@ -120,14 +115,11 @@ const TermsOfService = () => (
               Care Infra LLC<br />
               30 North Gould Street, STE R<br />
               Sheridan, WY 82801 US<br />
-              Phone: <a className="underline" href="tel:+18027661429">+1 802 766 1429</a><br />
+              Phone: +1 802 766 1429<br />
               Email: <a className="underline break-all" href="mailto:info@openwellnesshealth.com">info@openwellnesshealth.com</a>
             </address>
           </section>
         </Card>
-        <nav aria-label="Legal" className="text-center text-muted-foreground">
-          <a href="/privacy-policy" className="underline">Privacy Policy</a>
-        </nav>
       </div>
     </div>
   </div>
