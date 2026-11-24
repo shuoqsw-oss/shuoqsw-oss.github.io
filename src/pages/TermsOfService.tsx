@@ -112,7 +112,6 @@ const TermsOfService = () => (
               {paragraphs.map((paragraph) => (
                 <p key={paragraph} className="leading-relaxed text-muted-foreground">{paragraph}</p>
               ))}
-              {title.startsWith("7.") && <a className="inline-block underline text-muted-foreground" href="/privacy-policy">Read our Privacy Policy</a>}
             </section>
           ))}
           <section className="space-y-4">
