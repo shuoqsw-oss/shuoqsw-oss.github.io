@@ -57,7 +57,7 @@ const sections = [
   {
     title: "8. Maintenance and Support",
     paragraphs: [
-      "Care Infra LLC provides maintenance and support for our services across supported platforms as required by law or expressly offered by us. Direct questions, complaints, and claims to us using the contact information below.",
+      "Care Infra LLC is solely responsible for providing any maintenance and support services with respect to the App, as specified in these Terms or as required under applicable law. Direct questions, complaints, and claims to us using the contact information below.",
     ],
   },
   {
@@ -69,23 +69,23 @@ const sections = [
     ],
   },
   {
-    title: "9. Legal Compliance and Third-Party Terms",
-    paragraphs: [
-      "You represent that you are neither in a U.S.-embargoed or U.S.-designated terrorist-supporting country nor on a U.S. prohibited or restricted-party list. Follow applicable third-party agreements, including your wireless service agreement, when using the App.",
-    ],
-  },
-  {
     title: "10. Additional Apple App Store Terms",
     paragraphs: [
-      "This section applies only to the App obtained through Apple’s App Store. The EULA is between you and Care Infra LLC, not Apple; we are solely responsible for the App and its content. Apple has no obligation to maintain or support the App.",
+      "This section applies only to the App obtained through Apple’s App Store. The EULA is between you and Care Infra LLC, not Apple; we are solely responsible for the App and its content. You acknowledge and agree that Apple has no obligation whatsoever to furnish any maintenance or support services with respect to the App.",
       "Your App Store license is nontransferable and allows use on Apple-branded devices you own or control, as permitted by Apple Media Services usage rules, including permitted Family Sharing and volume purchasing. These Terms do not conflict with those usage rules.",
-      "We are responsible for warranties not lawfully excluded. If the App breaches an applicable warranty, notify Apple for a refund of its purchase price. Apple has no further warranty duties where law permits; we bear other resulting claims, losses, liabilities, damages, costs, and expenses.",
+      "We are solely responsible for any product warranties, whether express or implied by law, to the extent not effectively disclaimed. In the event the App fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price, if any, paid for the App. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App. Any other claims, losses, liabilities, damages, costs, or expenses attributable to any failure to conform to a warranty will be our sole responsibility.",
       "We, rather than Apple, address App-related product liability, regulatory, consumer protection, privacy, and similar claims, including HealthKit and HomeKit claims where applicable. We, rather than Apple, are solely responsible for investigating, defending, settling, and discharging third-party intellectual-property infringement claims relating to the App or your possession and use of it.",
       "Apple and its subsidiaries are third-party beneficiaries of this EULA. Upon your acceptance, Apple may enforce it against you and is deemed to accept that right.",
     ],
   },
   {
-    title: "11. Ending Use and Changes",
+    title: "11. Legal Compliance and Third-Party Terms",
+    paragraphs: [
+      "You represent that you are neither in a U.S.-embargoed or U.S.-designated terrorist-supporting country nor on a U.S. prohibited or restricted-party list. Follow applicable third-party agreements, including your wireless service agreement, when using the App.",
+    ],
+  },
+  {
+    title: "12. Ending Use and Changes",
     paragraphs: [
       "You may stop using the services at any time and request account deletion. We may suspend or terminate access for material violations or when required by law. Any such action remains subject to your mandatory consumer rights. Manage subscriptions separately through the original purchase channel as described above.",
       "We may update these Terms and will post the revised effective date. We will provide notice of material changes and obtain agreement where required by law. Changes do not remove rights that have already accrued or alter an existing paid subscription’s price or duration without the process required by the applicable purchase channel and law. If a provision is unenforceable, the remaining provisions continue to apply.",
@@ -129,7 +129,7 @@ const TermsOfService = () => (
             </section>
           ))}
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold">12. Developer Contact</h2>
+            <h2 className="text-2xl font-semibold">13. Developer Contact</h2>
             <address className="not-italic leading-relaxed text-muted-foreground">
               Care Infra LLC<br />
               30 North Gould Street, STE R<br />
